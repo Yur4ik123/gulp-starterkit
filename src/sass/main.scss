@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+$base-font-size: 12px;
+@mixin ph {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+body {
+  font-size: $base-font-size;
+  font-family: Arial;
+  line-height: 1.5;
+  background: green;
+
+  @include ph {
+    color: #fff;
+    background-color: #000;
+  }
+}
+.test {
+  width: 200px;
+  height: 200px;
+  background: url("../img/graph.png") no-repeat center/cover;
+}
+
+@import "block/*.scss";
